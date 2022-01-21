@@ -1,0 +1,11 @@
+#%Module1.0
+##
+##
+module-whatis "cgns3.4.0 modulefile"
+
+set topdir "/usr"
+prepend-path PATH "${topdir}/bin"
+setenv CGNS_HOME_INC "/usr/include"
+setenv CGNS_HOME_LIB "/usr/lib/x86_64-linux-gnu/libcgns.so"
+prepend-path LD_LIBRARY_PATH "/usr/lib/x86_64-linux-gnu"
+prepend-path LIBRARY_PATH "/usr/lib/x86_64-linux-gnu"

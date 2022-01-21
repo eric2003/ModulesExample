@@ -1,0 +1,6 @@
+#%Module1.0
+##
+##
+module-whatis "hpc_sdk NVCC_COMPILER modulefile"
+
+setenv NVCC_COMPILER "NVCC_COMPILER"

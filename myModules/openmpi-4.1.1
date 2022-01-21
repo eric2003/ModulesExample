@@ -1,0 +1,14 @@
+#%Module1.0
+##
+##
+module-whatis "openmpi-4.1.1 modulefile"
+
+set topdir "/home/eric/software/openmpi-4.1.1"
+append-path PATH "${topdir}/bin"
+append-path LIBRARY_PATH "${topdir}/lib"
+append-path LD_LIBRARY_PATH "${topdir}/lib"
+append-path CPATH "${topdir}/include"
+append-path CMAKE_PREFIX_PATH "${topdir}"
+setenv MPI_HOME "${topdir}"
+setenv MPI_HOME_INC "${topdir}/include"
+setenv MPI_HOME_LIB "${topdir}/lib/libmpi.so"

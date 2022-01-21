@@ -1,0 +1,9 @@
+#%Module1.0
+##
+##
+module-whatis "metis5.1.0 modulefile"
+
+set topdir "/usr"
+prepend-path PATH "${topdir}/bin"
+setenv METIS_HOME_INC "/usr/include"
+setenv METIS_HOME_LIB "/usr/lib/x86_64-linux-gnu/libmetis.so"

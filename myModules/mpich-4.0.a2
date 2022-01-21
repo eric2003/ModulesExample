@@ -1,0 +1,9 @@
+#%Module1.0
+##
+##
+module-whatis "mpich4.0.a2 modulefile"
+
+set topdir "//home/eric/software/mpich/4.0.a2"
+prepend-path PATH "${topdir}/bin"
+setenv MPI_HOME_INC "${topdir}/include"
+setenv MPI_HOME_LIB "${topdir}/lib/libmpich.so"

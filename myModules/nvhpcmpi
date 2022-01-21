@@ -1,0 +1,31 @@
+#%Module1.0
+##
+##
+module-whatis "hpc_sdk openmpi-3.1.5 modulefile"
+
+set nvhome /home/eric/software/nvidia/hpc_sdk
+set target Linux_x86_64
+set version 21.7
+
+set nvcompdir $nvhome/$target/$version/compilers
+set nvcommdir $nvhome/$target/$version/comm_libs
+
+set topdir "$nvcommdir/openmpi/openmpi-3.1.5"
+
+#setenv CC $nvcompdir/bin/nvc
+#setenv CXX $nvcompdir/bin/nvc++
+
+setenv CC $nvcommdir/mpi/bin/mpicc
+setenv CXX $nvcommdir/mpi/bin/mpic++
+setenv NVCC_COMPILER "NVCC_COMPILER"
+
+
+prepend-path PATH "${topdir}/bin"
+prepend-path LIBRARY_PATH "${topdir}/lib"
+prepend-path LD_LIBRARY_PATH "${topdir}/lib"
+prepend-path CPATH "${topdir}/include"
+prepend-path CMAKE_PREFIX_PATH "${topdir}"
+
+setenv MPI_HOME "${topdir}"
+setenv MPI_HOME_INC "${topdir}/include"
+setenv MPI_HOME_LIB "${topdir}/lib/libmpi.so"
